@@ -28,6 +28,6 @@
       config: yes
       config_format: xml
       provider: "{{ credential }}"
-    register: result
+    register: results
   - name: Configuration in JSON
-    debug: var=result.ansible_facts.config_json
+    debug: var=results.ansible_facts.config_json
